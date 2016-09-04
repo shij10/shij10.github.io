@@ -11,34 +11,22 @@
     
 
     
-    <meta name="description" content="install openssh-server
-
-1$ sudo apt-get install openssh-server
-
-edit the configuration file and look for the Port 22 line and uncomment it by removing the preceding hash sign
-
-1$ sudo vi /etc/ssh/ssh">
+    <meta name="description" content="install openssh-serversudo apt-get install openssh-server
+edit the configuration file and look for the Port 22 line and uncomment it by removing the preceding hash signsudo vi /etc/ssh/ssh_config
+res">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Ubuntu: How To Enable SSH">
 <meta property="og:url" content="http://ideacaff.com/2016/02/17/how-to-enable-ssh-3/index.html">
 <meta property="og:site_name" content="石头笔记">
-<meta property="og:description" content="install openssh-server
-
-1$ sudo apt-get install openssh-server
-
-edit the configuration file and look for the Port 22 line and uncomment it by removing the preceding hash sign
-
-1$ sudo vi /etc/ssh/ssh">
-<meta property="og:updated_time" content="2016-09-04T11:53:39.047Z">
+<meta property="og:description" content="install openssh-serversudo apt-get install openssh-server
+edit the configuration file and look for the Port 22 line and uncomment it by removing the preceding hash signsudo vi /etc/ssh/ssh_config
+res">
+<meta property="og:updated_time" content="2016-09-04T12:07:39.303Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ubuntu: How To Enable SSH">
-<meta name="twitter:description" content="install openssh-server
-
-1$ sudo apt-get install openssh-server
-
-edit the configuration file and look for the Port 22 line and uncomment it by removing the preceding hash sign
-
-1$ sudo vi /etc/ssh/ssh">
+<meta name="twitter:description" content="install openssh-serversudo apt-get install openssh-server
+edit the configuration file and look for the Port 22 line and uncomment it by removing the preceding hash signsudo vi /etc/ssh/ssh_config
+res">
 
     
     <link rel="alternative" href="/atom.xml" title="石头笔记" type="application/atom+xml">
@@ -119,19 +107,10 @@ edit the configuration file and look for the Port 22 line and uncomment it by re
 		</div>
 		
 		<ol>
-<li>install openssh-server</li>
+<li>install openssh-server<br><code>sudo apt-get install openssh-server</code></li>
+<li>edit the configuration file and look for the Port 22 line and uncomment it by removing the preceding hash sign<br><code>sudo vi /etc/ssh/ssh_config</code></li>
+<li>restart the SSH service<br><code>sudo service ssh restart</code>  or<br><code>sudo /etc/init.d/ssh restart</code></li>
 </ol>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo apt-get install openssh-server</div></pre></td></tr></table></figure>
-<ol>
-<li>edit the configuration file and look for the Port 22 line and uncomment it by removing the preceding hash sign</li>
-</ol>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo vi /etc/ssh/ssh_config</div></pre></td></tr></table></figure>
-<ol>
-<li>restart the SSH service</li>
-</ol>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo service ssh restart</div></pre></td></tr></table></figure>
-<p>or</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo /etc/init.d/ssh restart</div></pre></td></tr></table></figure>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -236,11 +215,11 @@ edit the configuration file and look for the Port 22 line and uncomment it by re
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/ubuntu/" title="ubuntu">ubuntu<sup>2</sup></a></li>
+				<li><a href="/tags/wordpress/" title="wordpress">wordpress<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/wordpress/" title="wordpress">wordpress<sup>2</sup></a></li>
+				<li><a href="/tags/ubuntu/" title="ubuntu">ubuntu<sup>2</sup></a></li>
 			
 		
 			
@@ -248,11 +227,27 @@ edit the configuration file and look for the Port 22 line and uncomment it by re
 			
 		
 			
+				<li><a href="/tags/dll/" title="dll">dll<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/anti-virus/" title="anti-virus">anti-virus<sup>1</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/cassandra/" title="cassandra">cassandra<sup>1</sup></a></li>
 			
 		
 			
+				<li><a href="/tags/python/" title="python">python<sup>1</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/ssh/" title="ssh">ssh<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/DNS/" title="DNS">DNS<sup>1</sup></a></li>
 			
 		
 			
@@ -264,27 +259,11 @@ edit the configuration file and look for the Port 22 line and uncomment it by re
 			
 		
 			
-				<li><a href="/tags/python/" title="python">python<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/DNS/" title="DNS">DNS<sup>1</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/hexo/" title="hexo">hexo<sup>1</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/github/" title="github">github<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/dll/" title="dll">dll<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/anti-virus/" title="anti-virus">anti-virus<sup>1</sup></a></li>
 			
 		
 			

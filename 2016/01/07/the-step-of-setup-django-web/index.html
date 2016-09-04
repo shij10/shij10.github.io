@@ -11,19 +11,34 @@
     
 
     
-    <meta name="description" content="# start a project$ django-admin.py startproject mysite# start a app$ python manage.py startapp polls# modify ENGINE, NAMEfrom os import pathPROJECT_ROOT = path.dirname(path.abspath(path.dirname(file))">
+    <meta name="description" content="start a project$ django-admin.py startproject mysite
+
+start a app$ python manage.py startapp polls
+
+modify ENGINE, NAMEfrom os import path
+PROJECT_ROOT = path.dirname(path.abspath(path.dirname(file)))">
 <meta property="og:type" content="article">
 <meta property="og:title" content="The step of setup django web">
 <meta property="og:url" content="http://ideacaff.com/2016/01/07/the-step-of-setup-django-web/index.html">
 <meta property="og:site_name" content="石头笔记">
-<meta property="og:description" content="# start a project$ django-admin.py startproject mysite# start a app$ python manage.py startapp polls# modify ENGINE, NAMEfrom os import pathPROJECT_ROOT = path.dirname(path.abspath(path.dirname(file))">
+<meta property="og:description" content="start a project$ django-admin.py startproject mysite
+
+start a app$ python manage.py startapp polls
+
+modify ENGINE, NAMEfrom os import path
+PROJECT_ROOT = path.dirname(path.abspath(path.dirname(file)))">
 <meta property="og:image" content="http://ideacaff.com/img/onenote-568d41e22c3760.36676796.png">
 <meta property="og:image" content="http://ideacaff.com/img/onenote-568d41e35443d7.31308359.png">
 <meta property="og:image" content="http://ideacaff.com/img/onenote-568d41e43c1c50.41249397.png">
-<meta property="og:updated_time" content="2016-09-04T11:50:31.849Z">
+<meta property="og:updated_time" content="2016-09-04T11:58:38.303Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="The step of setup django web">
-<meta name="twitter:description" content="# start a project$ django-admin.py startproject mysite# start a app$ python manage.py startapp polls# modify ENGINE, NAMEfrom os import pathPROJECT_ROOT = path.dirname(path.abspath(path.dirname(file))">
+<meta name="twitter:description" content="start a project$ django-admin.py startproject mysite
+
+start a app$ python manage.py startapp polls
+
+modify ENGINE, NAMEfrom os import path
+PROJECT_ROOT = path.dirname(path.abspath(path.dirname(file)))">
 <meta name="twitter:image" content="http://ideacaff.com/img/onenote-568d41e22c3760.36676796.png">
 
     
@@ -100,11 +115,32 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#start-a-project"><span class="toc-number">1.</span> <span class="toc-text">start a project</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#start-a-app"><span class="toc-number">2.</span> <span class="toc-text">start a app</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#modify-ENGINE-NAME"><span class="toc-number">3.</span> <span class="toc-text">modify ENGINE, NAME</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Apply-the-DB"><span class="toc-number">4.</span> <span class="toc-text">Apply the DB</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Enable-admin"><span class="toc-number">5.</span> <span class="toc-text">Enable admin</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#重新定义-admin-对象的样式"><span class="toc-number">6.</span> <span class="toc-text">重新定义 admin 对象的样式</span></a></li></ol>
 		
 		</div>
 		
-		<div style="position: default; left: 120px; top: 115px; width: 832px;"><br><br># start a project<br><br>$ django-admin.py startproject mysite<br><br><img src="/img/onenote-568d41e22c3760.36676796.png" alt=""><br><br># start a app<br><br>$ python manage.py startapp polls<br><br><img src="/img/onenote-568d41e35443d7.31308359.png" alt=""><br><br># modify ENGINE, NAME<br><br><span style="font-family: Arial; font-size: 10pt; background-color: yellow;">from os import path</span><br><br><span style="font-family: Arial; font-size: 10pt; background-color: yellow;">PROJECT_ROOT = path.dirname(path.abspath(path.dirname(<strong>file</strong>)))</span><br><br><span style="font-family: Arial; font-size: 10pt;">DATABASES = {</span><br><br><span style="font-family: Arial; font-size: 10pt;"> ‘default’: {</span><br><br><span style="font-family: Arial; font-size: 10pt;"> ‘ENGINE’: ‘django.db.backends</span><span style="font-family: Arial; font-size: 10pt; background-color: yellow;">.sqlite3</span><span style="font-family: Arial; font-size: 10pt;">‘, # Add ‘postgresql_psycopg2’, ‘mysql’, ‘sqlite3’ or ‘oracle’.</span><br><br><span style="font-family: Arial; font-size: 10pt;"> ‘NAME’: </span><span style="font-family: Arial; font-size: 10pt; background-color: yellow;">path.join(PROJECT_ROOT, ‘db.sqlite3’)</span><span style="font-family: Arial; font-size: 10pt;">, # Or path to database file if using sqlite3.</span><br><br><span style="font-family: Arial; font-size: 10pt;"> ‘USER’: ‘’, # Not used with sqlite3.</span><br><br><span style="font-family: Arial; font-size: 10pt;"> ‘PASSWORD’: ‘’, # Not used with sqlite3.</span><br><br><span style="font-family: Arial; font-size: 10pt;"> ‘HOST’: ‘’, # Set to empty string for localhost. Not used with sqlite3.</span><br><br><span style="font-family: Arial; font-size: 10pt;"> ‘PORT’: ‘’, # Set to empty string for default. Not used with sqlite3.</span><br><br><span style="font-family: Arial; font-size: 10pt;"> }</span><br><br><span style="font-family: Arial; font-size: 10pt;">}</span><br><br># Apply the DB<br><br>$ python manage.py migrate<br><br><span style="font-family: 宋体;">如果</span><span lang="en-US"> app </span><span style="font-family: 宋体;">里面的</span><span lang="en-US"> model </span><span style="font-family: 宋体;">有变动</span><span lang="en-US">: </span><span style="font-family: 宋体;">需要</span> <span style="font-family: 宋体;">先执行</span><span lang="en-US"> makemigrations</span><br><br><!-- OutlineGroupNode is not supported --><br><br># Enable admin<br><br># 重新定义 admin 对象的样式<br><br> create a model admin object, then pass it as the second argument to <span style="font-family: Fira Mono; font-size: 13pt; color: #0c4b33; background-color: white; font-weight: bold;">admin.site.register()</span> – any time you need to change the admin options for an object.<br><br><img src="/img/onenote-568d41e43c1c50.41249397.png" alt=""><br><br>&nbsp;<br><br></div>  
+		<h1 id="start-a-project"><a href="#start-a-project" class="headerlink" title="start a project"></a>start a project</h1><p>$ django-admin.py startproject mysite</p>
+<p><img src="/img/onenote-568d41e22c3760.36676796.png" alt=""></p>
+<h1 id="start-a-app"><a href="#start-a-app" class="headerlink" title="start a app"></a>start a app</h1><p>$ python manage.py startapp polls</p>
+<p><img src="/img/onenote-568d41e35443d7.31308359.png" alt=""></p>
+<h1 id="modify-ENGINE-NAME"><a href="#modify-ENGINE-NAME" class="headerlink" title="modify ENGINE, NAME"></a>modify ENGINE, NAME</h1><p><span style="font-family: Arial; font-size: 10pt; background-color: yellow;">from os import path</span></p>
+<p><span style="font-family: Arial; font-size: 10pt; background-color: yellow;">PROJECT_ROOT = path.dirname(path.abspath(path.dirname(<strong>file</strong>)))</span></p>
+<p><span style="font-family: Arial; font-size: 10pt;">DATABASES = {</span></p>
+<p><span style="font-family: Arial; font-size: 10pt;"> ‘default’: {</span></p>
+<p><span style="font-family: Arial; font-size: 10pt;"> ‘ENGINE’: ‘django.db.backends</span><span style="font-family: Arial; font-size: 10pt; background-color: yellow;">.sqlite3</span><span style="font-family: Arial; font-size: 10pt;">‘, # Add ‘postgresql_psycopg2’, ‘mysql’, ‘sqlite3’ or ‘oracle’.</span></p>
+<p><span style="font-family: Arial; font-size: 10pt;"> ‘NAME’: </span><span style="font-family: Arial; font-size: 10pt; background-color: yellow;">path.join(PROJECT_ROOT, ‘db.sqlite3’)</span><span style="font-family: Arial; font-size: 10pt;">, # Or path to database file if using sqlite3.</span></p>
+<p><span style="font-family: Arial; font-size: 10pt;"> ‘USER’: ‘’, # Not used with sqlite3.</span></p>
+<p><span style="font-family: Arial; font-size: 10pt;"> ‘PASSWORD’: ‘’, # Not used with sqlite3.</span></p>
+<p><span style="font-family: Arial; font-size: 10pt;"> ‘HOST’: ‘’, # Set to empty string for localhost. Not used with sqlite3.</span></p>
+<p><span style="font-family: Arial; font-size: 10pt;"> ‘PORT’: ‘’, # Set to empty string for default. Not used with sqlite3.</span></p>
+<p><span style="font-family: Arial; font-size: 10pt;"> }</span></p>
+<p><span style="font-family: Arial; font-size: 10pt;">}</span></p>
+<h1 id="Apply-the-DB"><a href="#Apply-the-DB" class="headerlink" title="Apply the DB"></a>Apply the DB</h1><p>$ python manage.py migrate</p>
+<p><span style="font-family: 宋体;">如果</span><span lang="en-US"> app </span><span style="font-family: 宋体;">里面的</span><span lang="en-US"> model </span><span style="font-family: 宋体;">有变动</span><span lang="en-US">: </span><span style="font-family: 宋体;">需要</span> <span style="font-family: 宋体;">先执行</span><span lang="en-US"> makemigrations</span></p>
+<!-- OutlineGroupNode is not supported -->
+<h1 id="Enable-admin"><a href="#Enable-admin" class="headerlink" title="Enable admin"></a>Enable admin</h1><h1 id="重新定义-admin-对象的样式"><a href="#重新定义-admin-对象的样式" class="headerlink" title="重新定义 admin 对象的样式"></a>重新定义 admin 对象的样式</h1><p> create a model admin object, then pass it as the second argument to <span style="font-family: Fira Mono; font-size: 13pt; color: #0c4b33; background-color: white; font-weight: bold;">admin.site.register()</span> – any time you need to change the admin options for an object.</p>
+<p><img src="/img/onenote-568d41e43c1c50.41249397.png" alt=""></p>
+  
 	</div>
 		<footer class="article-footer clearfix">
 <div class="article-catetags">
@@ -166,7 +202,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- 
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#start-a-project"><span class="toc-number">1.</span> <span class="toc-text">start a project</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#start-a-app"><span class="toc-number">2.</span> <span class="toc-text">start a app</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#modify-ENGINE-NAME"><span class="toc-number">3.</span> <span class="toc-text">modify ENGINE, NAME</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Apply-the-DB"><span class="toc-number">4.</span> <span class="toc-text">Apply the DB</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Enable-admin"><span class="toc-number">5.</span> <span class="toc-text">Enable admin</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#重新定义-admin-对象的样式"><span class="toc-number">6.</span> <span class="toc-text">重新定义 admin 对象的样式</span></a></li></ol>
  
   </div>
 
@@ -208,11 +244,11 @@
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/ubuntu/" title="ubuntu">ubuntu<sup>2</sup></a></li>
+				<li><a href="/tags/wordpress/" title="wordpress">wordpress<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/wordpress/" title="wordpress">wordpress<sup>2</sup></a></li>
+				<li><a href="/tags/ubuntu/" title="ubuntu">ubuntu<sup>2</sup></a></li>
 			
 		
 			
@@ -220,11 +256,27 @@
 			
 		
 			
+				<li><a href="/tags/dll/" title="dll">dll<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/anti-virus/" title="anti-virus">anti-virus<sup>1</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/cassandra/" title="cassandra">cassandra<sup>1</sup></a></li>
 			
 		
 			
+				<li><a href="/tags/python/" title="python">python<sup>1</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/ssh/" title="ssh">ssh<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/DNS/" title="DNS">DNS<sup>1</sup></a></li>
 			
 		
 			
@@ -236,27 +288,11 @@
 			
 		
 			
-				<li><a href="/tags/python/" title="python">python<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/DNS/" title="DNS">DNS<sup>1</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/hexo/" title="hexo">hexo<sup>1</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/github/" title="github">github<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/dll/" title="dll">dll<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/anti-virus/" title="anti-virus">anti-virus<sup>1</sup></a></li>
 			
 		
 			
