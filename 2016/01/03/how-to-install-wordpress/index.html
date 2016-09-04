@@ -4,62 +4,38 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>利用 hexo + github 搭建个人博客 | 我的博客</title>
+    <title>How to install wordpress | 我的博客</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="John Shi">
     
 
     
-    <meta name="description" content="Hexo是一个开源的静态博客生成器， GitHub Pages免费的静态站点，利用两者可以方便搭建简单的个人博客。
-准备条件
-hexo
-git
+    <meta name="description" content="Enverienment: ubuntu 14.04
 
-安装 hexo
-安装node.js
-校验node.js 
-
-12$ node -v$ npm -v
-
-安装hexo
-
-123456$ npm install hexo-cli -g$ npm install hexo --save$ hexo -v$ h">
+apt-get install apache2
+apt-get install php5
+apt-get install mysql-server mysql-client
+download the code of wordpress from official site">
 <meta property="og:type" content="article">
-<meta property="og:title" content="利用 hexo + github 搭建个人博客">
-<meta property="og:url" content="http://yoursite.com/2016/09/04/myblog-hexo/index.html">
+<meta property="og:title" content="How to install wordpress">
+<meta property="og:url" content="http://yoursite.com/2016/01/03/how-to-install-wordpress/index.html">
 <meta property="og:site_name" content="我的博客">
-<meta property="og:description" content="Hexo是一个开源的静态博客生成器， GitHub Pages免费的静态站点，利用两者可以方便搭建简单的个人博客。
-准备条件
-hexo
-git
+<meta property="og:description" content="Enverienment: ubuntu 14.04
 
-安装 hexo
-安装node.js
-校验node.js 
-
-12$ node -v$ npm -v
-
-安装hexo
-
-123456$ npm install hexo-cli -g$ npm install hexo --save$ hexo -v$ h">
-<meta property="og:updated_time" content="2016-09-03T20:12:48.332Z">
+apt-get install apache2
+apt-get install php5
+apt-get install mysql-server mysql-client
+download the code of wordpress from official site">
+<meta property="og:updated_time" content="2016-09-04T04:16:36.814Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="利用 hexo + github 搭建个人博客">
-<meta name="twitter:description" content="Hexo是一个开源的静态博客生成器， GitHub Pages免费的静态站点，利用两者可以方便搭建简单的个人博客。
-准备条件
-hexo
-git
+<meta name="twitter:title" content="How to install wordpress">
+<meta name="twitter:description" content="Enverienment: ubuntu 14.04
 
-安装 hexo
-安装node.js
-校验node.js 
-
-12$ node -v$ npm -v
-
-安装hexo
-
-123456$ npm install hexo-cli -g$ npm install hexo --save$ hexo -v$ h">
+apt-get install apache2
+apt-get install php5
+apt-get install mysql-server mysql-client
+download the code of wordpress from official site">
 
     
     <link rel="alternative" href="/atom.xml" title="我的博客" type="application/atom+xml">
@@ -119,14 +95,14 @@ git
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/09/04/myblog-hexo/" title="利用 hexo + github 搭建个人博客" itemprop="url">利用 hexo + github 搭建个人博客</a>
+      <a href="/2016/01/03/how-to-install-wordpress/" title="How to install wordpress" itemprop="url">How to install wordpress</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="John Shi" target="_blank" itemprop="author">John Shi</a>
 		
   <p class="article-time">
-    <time datetime="2016-09-03T18:59:07.000Z" itemprop="datePublished"> Published 2016-09-04</time>
+    <time datetime="2016-01-03T09:50:06.000Z" itemprop="datePublished"> Published 2016-01-03</time>
     
   </p>
 </header>
@@ -135,30 +111,26 @@ git
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">Contents</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#准备条件"><span class="toc-number">1.</span> <span class="toc-text">准备条件</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装-hexo"><span class="toc-number">1.1.</span> <span class="toc-text">安装 hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装-git"><span class="toc-number">1.2.</span> <span class="toc-text">安装 git</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置-config-yml"><span class="toc-number">1.3.</span> <span class="toc-text">配置_config.yml</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#部署（上传）到github"><span class="toc-number">1.4.</span> <span class="toc-text">部署（上传）到github</span></a></li></ol></li></ol>
+			
 		
 		</div>
 		
-		<p>Hexo是一个开源的静态博客生成器， GitHub Pages免费的静态站点，利用两者可以方便搭建简单的个人博客。</p>
-<h1 id="准备条件"><a href="#准备条件" class="headerlink" title="准备条件"></a>准备条件</h1><ol>
-<li>hexo</li>
-<li>git</li>
-</ol>
-<h2 id="安装-hexo"><a href="#安装-hexo" class="headerlink" title="安装 hexo"></a>安装 hexo</h2><ol>
-<li>安装node.js</li>
-<li>校验node.js </li>
-</ol>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ node -v</div><div class="line">$ npm -v</div></pre></td></tr></table></figure>
+		<p>Enverienment: ubuntu 14.04</p>
 <ol>
-<li>安装hexo</li>
+<li>apt-get install apache2</li>
+<li>apt-get install php5</li>
+<li>apt-get install mysql-server mysql-client</li>
+<li>download the code of wordpress from official site</li>
 </ol>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-cli -g</div><div class="line">$ npm install hexo --save</div><div class="line">$ hexo -v</div><div class="line">$ hexo init &amp; npm install</div><div class="line">$ hexo g</div><div class="line">$ hexo s</div></pre></td></tr></table></figure>
-<h2 id="安装-git"><a href="#安装-git" class="headerlink" title="安装 git"></a>安装 git</h2><h2 id="配置-config-yml"><a href="#配置-config-yml" class="headerlink" title="配置_config.yml"></a>配置_config.yml</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repo: git@github.com:yourname/yourname.github.io.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure>
-<h2 id="部署（上传）到github"><a href="#部署（上传）到github" class="headerlink" title="部署（上传）到github"></a>部署（上传）到github</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-deployer-git --save</div><div class="line">$ hexo d</div></pre></td></tr></table></figure>
   
 	</div>
 		<footer class="article-footer clearfix">
 <div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/未分类/">未分类</a>
+</div>
 
 
 </div>
@@ -167,7 +139,7 @@ git
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://yoursite.com/2016/09/04/myblog-hexo/" data-title="利用 hexo + github 搭建个人博客 | 我的博客" data-tsina="null" class="share clearfix">
+	  <div data-url="http://yoursite.com/2016/01/03/how-to-install-wordpress/" data-title="How to install wordpress | 我的博客" data-tsina="null" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -180,14 +152,14 @@ git
 	
 <nav class="article-nav clearfix">
  
-
-<div class="next">
-<a href="/2016/04/16/dll-inject-virus/"  title="DLL Inject Virus">
- <strong>下一篇：</strong><br/> 
- <span>DLL Inject Virus
-</span>
+ <div class="prev" >
+ <a href="/2016/01/04/8/" title="如何建立个人博客">
+  <strong>上一篇：</strong><br/>
+  <span>
+  如何建立个人博客</span>
 </a>
 </div>
+
 
 </nav>
 
@@ -199,7 +171,7 @@ git
   <div id="toc" class="toc-aside">
   <strong class="toc-title">Contents</strong>
  
- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#准备条件"><span class="toc-number">1.</span> <span class="toc-text">准备条件</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装-hexo"><span class="toc-number">1.1.</span> <span class="toc-text">安装 hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装-git"><span class="toc-number">1.2.</span> <span class="toc-text">安装 git</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置-config-yml"><span class="toc-number">1.3.</span> <span class="toc-text">配置_config.yml</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#部署（上传）到github"><span class="toc-number">1.4.</span> <span class="toc-text">部署（上传）到github</span></a></li></ol></li></ol>
+ 
  
   </div>
 
