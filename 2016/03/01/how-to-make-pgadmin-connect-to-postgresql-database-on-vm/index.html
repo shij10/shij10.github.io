@@ -1,32 +1,35 @@
 
  <!DOCTYPE HTML>
-<html >
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
   
-    <title>How to make pgAdmin connected to  postgresql database on VM? | 我的博客</title>
+    <title>How to make pgAdmin connected to  postgresql database on VM? | 石头笔记</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="John Shi">
     
 
     
-    <meta name="description" content="1. Install postgresql (e.g. centos: yum install postgresql-server).
-2. Allow TCP/IP socket (suppose we’re using PostgreSQL versio8.x or newer)vi /var/lib/pgsql/data/postgresql.confFind configuration l">
+    <meta name="description" content="Install postgresql (e.g. centos: yum install postgresql-server).
+
+Allow TCP/IP socket (suppose we’re using PostgreSQL versio8.x or newer)vi /var/lib/pgsql/data/postgresql.confFind configuration line:">
 <meta property="og:type" content="article">
 <meta property="og:title" content="How to make pgAdmin connected to  postgresql database on VM?">
 <meta property="og:url" content="http://ideacaff.com/2016/03/01/how-to-make-pgadmin-connect-to-postgresql-database-on-vm/index.html">
-<meta property="og:site_name" content="我的博客">
-<meta property="og:description" content="1. Install postgresql (e.g. centos: yum install postgresql-server).
-2. Allow TCP/IP socket (suppose we’re using PostgreSQL versio8.x or newer)vi /var/lib/pgsql/data/postgresql.confFind configuration l">
-<meta property="og:updated_time" content="2016-09-04T04:16:36.816Z">
+<meta property="og:site_name" content="石头笔记">
+<meta property="og:description" content="Install postgresql (e.g. centos: yum install postgresql-server).
+
+Allow TCP/IP socket (suppose we’re using PostgreSQL versio8.x or newer)vi /var/lib/pgsql/data/postgresql.confFind configuration line:">
+<meta property="og:updated_time" content="2016-09-04T11:35:40.160Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="How to make pgAdmin connected to  postgresql database on VM?">
-<meta name="twitter:description" content="1. Install postgresql (e.g. centos: yum install postgresql-server).
-2. Allow TCP/IP socket (suppose we’re using PostgreSQL versio8.x or newer)vi /var/lib/pgsql/data/postgresql.confFind configuration l">
+<meta name="twitter:description" content="Install postgresql (e.g. centos: yum install postgresql-server).
+
+Allow TCP/IP socket (suppose we’re using PostgreSQL versio8.x or newer)vi /var/lib/pgsql/data/postgresql.confFind configuration line:">
 
     
-    <link rel="alternative" href="/atom.xml" title="我的博客" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="石头笔记" type="application/atom+xml">
     
     
     <link rel="icon" href="/img/favicon.ico">
@@ -44,14 +47,14 @@
 <div>
 		
 			<div id="imglogo">
-				<a href="/"><img src="/img/logo.png" alt="我的博客" title="我的博客"/></a>
+				<a href="/"><img src="/img/logo.png" alt="石头笔记" title="石头笔记"/></a>
 			</div>
 			
 			<div id="textlogo">
-				<h1 class="site-name"><a href="/" title="我的博客">我的博客</a></h1>
-				<h2 class="blog-motto"></h2>
+				<h1 class="site-name"><a href="/" title="石头笔记">石头笔记</a></h1>
+				<h2 class="blog-motto">学习，工作，生活</h2>
 			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
 			</a></div>
 			<nav class="animated">
 				<ul>
@@ -67,7 +70,7 @@
  					
 					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
 						<label>Search</label>
-						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
 						<input type="hidden" name="q" value="site:ideacaff.com">
 					</form>
 					
@@ -90,24 +93,31 @@
 		<a href="/about" title="John Shi" target="_blank" itemprop="author">John Shi</a>
 		
   <p class="article-time">
-    <time datetime="2016-03-01T08:59:42.000Z" itemprop="datePublished"> Published 2016-03-01</time>
+    <time datetime="2016-03-01T08:59:42.000Z" itemprop="datePublished"> 发表于 2016-03-01</time>
     
   </p>
 </header>
 	<div class="article-content">
 		
 		<div id="toc" class="toc-article">
-			<strong class="toc-title">Contents</strong>
+			<strong class="toc-title">文章目录</strong>
 		
 			
 		
 		</div>
 		
-		<p>1. Install postgresql (e.g. centos: yum install postgresql-server).</p>
-<p>2. Allow TCP/IP socket (suppose we’re using PostgreSQL versio8.x or newer)<br><code>vi /var/lib/pgsql/data/postgresql.conf</code><br>Find configuration line:<br><code>listen_addresses=&#39;localhost&#39;</code><br>And change it to:<br><code>listen_addresses=&#39;*&#39;</code><br>or<br><code>listen_addresses=&#39;x.x.x.x x.x.x.x&#39;</code></p>
-<p>3. Enable client authentication<br><code>vi /var/lib/pgsql/data/pg_hba.conf</code><br>and add the line”:<br><code>host all all 10.10.29.0/24 trust</code></p>
-<p>4. restart PostgreSQL server<br><code>/etc/init.d/postgresql restart</code><br>or<br><code>service postgresql restart</code></p>
-<p>5. Make port mapping. (e.g. 127.0.0.1:5432 -&gt; 10.0.2.15:5432)</p>
+		<ol>
+<li><p>Install postgresql (e.g. centos: yum install postgresql-server).</p>
+</li>
+<li><p>Allow TCP/IP socket (suppose we’re using PostgreSQL versio8.x or newer)<br><code>vi /var/lib/pgsql/data/postgresql.conf</code><br>Find configuration line:<br><code>listen_addresses=&#39;localhost&#39;</code><br>And change it to:<br><code>listen_addresses=&#39;*&#39;</code><br>or<br><code>listen_addresses=&#39;x.x.x.x x.x.x.x&#39;</code></p>
+</li>
+<li><p>Enable client authentication<br><code>vi /var/lib/pgsql/data/pg_hba.conf</code><br>and add the line”:<br><code>host all all 10.10.29.0/24 trust</code></p>
+</li>
+<li><p>restart PostgreSQL server<br><code>/etc/init.d/postgresql restart</code><br>or<br><code>service postgresql restart</code></p>
+</li>
+<li><p>Make port mapping. (e.g. 127.0.0.1:5432 -&gt; 10.0.2.15:5432)</p>
+</li>
+</ol>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -115,9 +125,14 @@
 
 <div class="article-categories">
   <span></span>
-  <a class="article-category-link" href="/categories/未分类/">未分类</a>
+  <a class="article-category-link" href="/categories/Database/">Database</a>
 </div>
 
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/pgAdmin/">pgAdmin</a><a href="/tags/postgresql/">postgresql</a>
+  </div>
 
 </div>
 
@@ -125,7 +140,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://ideacaff.com/2016/03/01/how-to-make-pgadmin-connect-to-postgresql-database-on-vm/" data-title="How to make pgAdmin connected to  postgresql database on VM? | 我的博客" data-tsina="null" class="share clearfix">
+	  <div data-url="http://ideacaff.com/2016/03/01/how-to-make-pgadmin-connect-to-postgresql-database-on-vm/" data-title="How to make pgAdmin connected to  postgresql database on VM? | 石头笔记" data-tsina="null" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -160,17 +175,17 @@
 	
 
 </div>  
-      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
 
   <div id="toc" class="toc-aside">
-  <strong class="toc-title">Contents</strong>
+  <strong class="toc-title">文章目录</strong>
  
  
  
   </div>
 
 <div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
 <aside class="clearfix">
 
   
@@ -178,11 +193,23 @@
 
   
 <div class="categorieslist">
-	<p class="asidetitle">Categories</p>
+	<p class="asidetitle">分类</p>
 		<ul>
 		
 		  
-			<li><a href="/categories/未分类/" title="未分类">未分类<sup>7</sup></a></li>
+			<li><a href="/categories/Database/" title="Database">Database<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Linux/" title="Linux">Linux<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/web/" title="web">web<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/其它/" title="其它">其它<sup>4</sup></a></li>
 		  
 		
 		</ul>
@@ -190,9 +217,72 @@
 
 
   
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/ubuntu/" title="ubuntu">ubuntu<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/wordpress/" title="wordpress">wordpress<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/vps/" title="vps">vps<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/cassandra/" title="cassandra">cassandra<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/ssh/" title="ssh">ssh<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/pgAdmin/" title="pgAdmin">pgAdmin<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/postgresql/" title="postgresql">postgresql<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/python/" title="python">python<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/DNS/" title="DNS">DNS<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/hexo/" title="hexo">hexo<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/github/" title="github">github<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/dll/" title="dll">dll<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/anti-virus/" title="anti-virus">anti-virus<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/django/" title="django">django<sup>1</sup></a></li>
+			
+		
+		</ul>
+</div>
+
 
   <div class="linkslist">
-  <p class="asidetitle">Links</p>
+  <p class="asidetitle">友情链接</p>
     <ul>
         
     </ul>
@@ -202,11 +292,11 @@
 
 
   <div class="rsspart">
-	<a href="/atom.xml" target="_blank" title="rss">RSS</a>
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
 </div>
 
   <div class="weiboshow">
-  <p class="asidetitle">Weibo</p>
+  <p class="asidetitle">新浪微博</p>
     <iframe width="100%" height="119" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=1&speed=0&skin=9&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=null&verifier=&dpc=1"></iframe>
 </div>
 
@@ -428,7 +518,7 @@ var _hmt = _hmt || [];
 <!-- Totop Begin -->
 
 	<div id="totop">
-	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
 	</div>
 	<script src="/js/totop.js"></script>
 
